@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 날씨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ 오늘 날씨</h1>
+        </header>
+        
+        <div class="search-section">
+            <div class="search-box">
+                <div class="input-wrapper">
+                    <input type="text" id="cityInput" placeholder="도시 이름을 입력하세요 (예: 서울, 부산, 제주도, Seoul)">
+                    <div id="autocomplete" class="autocomplete hidden"></div>
+                </div>
+                <button id="searchBtn">검색</button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>날씨 정보를 불러오는 중...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="weatherCard" class="weather-card hidden">
+            <div class="location-info">
+                <h2 id="locationName"></h2>
+                <p id="locationDetails"></p>
+                <p id="currentTime"></p>
+            </div>
+
+            <div class="main-weather">
+                <div class="weather-icon">
+                    <img id="weatherIcon" alt="날씨 아이콘">
+                </div>
+                <div class="temperature">
+                    <span id="tempC" class="temp-main"></span>
+                    <span id="tempF" class="temp-sub"></span>
+                </div>
+                <div class="condition">
+                    <p id="conditionText"></p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-label">체감 온도</span>
+                    <span id="feelsLike" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">습도</span>
+                    <span id="humidity" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">풍속</span>
+                    <span id="windSpeed" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">기압</span>
+                    <span id="pressure" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">강수량</span>
+                    <span id="precipitation" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">자외선 지수</span>
+                    <span id="uvIndex" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">가시거리</span>
+                    <span id="visibility" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">구름</span>
+                    <span id="cloud" class="detail-value"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
